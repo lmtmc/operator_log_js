@@ -26,22 +26,25 @@
 }
 
 .Session {
-  
   border: grey solid 1px;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: horizontal; /* Uncommented */
   align-items: start;
-  /* justify-content: center; */
-  /* min-height: 20vh; */
   padding: 10px;
   float: left;
   width: 100%;
-
-  
-  margin: 20px 20px 20px 20px;
+  margin: 20px;
+  overflow: auto; /* Added to handle overflow */
+  box-sizing: border-box; /* Added to include padding and border in width/height */
 }
+
+.Session > * { /* Style for child elements */
+  max-width: 100%;
+  box-sizing: border-box; /* Include padding and border in width/height */
+}
+
 .session-header {
   font-size: 20px;
   font-weight: bold;
